@@ -24,26 +24,29 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/samsung/a10/device.mk)
 
 # Inherit some common ResurrectionRemix stuff.
-$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := a10
-PRODUCT_NAME := havoc_a10
+PRODUCT_NAME := lineage_a10
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A105F
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_PDA_MODEL := A105F
-PRODUCT_PDA_MODEL_VERSION := DDU3BTF1
+PRODUCT_PDA_MODEL := A205W
+PRODUCT_PDA_MODEL_VERSION := VLU3ASK2
 PRODUCT_PDA_VERSION := $(PRODUCT_PDA_MODEL)$(PRODUCT_PDA_MODEL_VERSION)
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
+TARGET_BOOT_ANIMATION_RES := 1080
 
-BUILD_FINGERPRINT := google/flame/flame:10/QQ3A.200805.001/6578210:user/release-keys
+LAWNCHAIR_OPTOUT := true
+
+BUILD_FINGERPRINT := samsung/a20cs/a20:9/PPR1.180610.011/A205WVLU3ASK2:user/release-keys
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=a10dd \
-    PRODUCT_DEVICE=a10 \
-    PRIVATE_BUILD_DESC="a10dd-user 10 QP1A.190711.020 $(PRODUCT_PDA_VERSION) release-keys"
+    PRODUCT_NAME=a20cs \
+    PRODUCT_DEVICE=a20 \
+    PRIVATE_BUILD_DESC="a20cs-user 9 PPR1.180610.011 $(PRODUCT_PDA_VERSION) release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.PDA=$(PRODUCT_PDA_VERSION)

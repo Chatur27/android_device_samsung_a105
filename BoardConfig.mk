@@ -150,7 +150,7 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 # SELinux
 BOARD_SEPOLICY_VERS := 29.0
 BOARD_SEPOLICY_TEE_FLAVOR := teegris
-include device/havoc/sepolicy/exynos/sepolicy.mk
+include device/lineage/sepolicy/exynos/sepolicy.mk
 include device/samsung_slsi/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
